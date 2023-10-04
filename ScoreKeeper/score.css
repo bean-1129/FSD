@@ -1,0 +1,44 @@
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+.pingpong img, .scorekeeper{
+    box-shadow: 0 0 8px grey;
+}
+.pingpong img{
+    width: 393px;
+}
+.scorekeeper{
+    width: 376px;
+   padding: 10px;
+}
+.points{
+    margin-bottom: 10px;
+}
+#btnPlayer1{
+    background-color: rgb(62, 163, 62);
+    padding: 10px;
+    border: 0px;
+    cursor: pointer;
+}
+#btnPlayer2{
+    background-color: rgb(60, 58, 204);
+    padding: 10px;
+    border: 0px;
+    cursor: pointer;
+
+}
+#btnReset{
+    background-color: rgb(208, 59, 39);
+    padding: 10px;
+    border: 0px;
+    cursor: pointer;
+
+}
+button:hover{
+    transform: translateY(-5px);
+    transition: 0.25s;
+}
