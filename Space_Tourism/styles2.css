@@ -1,0 +1,141 @@
+/* Add CSS styles here */
+body {
+    
+  background-image: url('new-bg2.jpg');
+  color: black;
+  font-family: 'Space Grotesk', sans-serif;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+  
+  .container {
+    max-width: 1000px;
+    margin: 10 auto;
+    padding: 20px;
+    background-color: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(2, 70, 110, 0.662);
+  }
+  
+  h1 {
+    text-align: left;
+   
+  }
+  
+  .package {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .package h2 {
+    color: #333;
+  }
+  
+  .package p {
+    color: #666;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Highlight on hover */
+  .package:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.2s;
+  }
+  
+  /* Beautify the dropdown */
+  select {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  select:hover,
+  select:focus {
+    border-color: #333;
+  }
+
+  #package-list{
+    margin-top: 20px;
+
+  }
+  
+  #destination{
+    background-color: #f0f0f0;
+    transition: background-color 0.2s;
+  }
+  /**Navbar Starts**/
+
+
+
+.navbar{
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.logo{
+  width: 136px;
+  height: 131px;
+}
+.search{
+  border-radius: 150px;
+  width: 300px;
+  height: 50px;
+  background-color: #1E1E1E;
+  padding: 20px;
+  color: white;
+  margin-left: 72px;
+  margin-right: 50px ;
+  margin-top: 34px
+
+}
+.autocomplete-items{
+  
+  border-radius: 0 0 150px 150px;
+ 
+  width: 291px;
+  height: 50px;
+  margin-left: 71px;
+  padding-left: 10px;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+  font-size: 20px;
+}
+/**Navbar Starts**/
+.package h2{
+  color: #1E1E1E;
+}
+
+#package-list{
+  background-color: none;
+}
+.container{
+  align-items: center;
+  margin: 50px;
+}
+.container h1,label{
+  color: white;
+}
+.destination-label{
+  font-size: 20px;
+}

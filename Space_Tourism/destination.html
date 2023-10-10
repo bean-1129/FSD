@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Catalog</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="destination.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+</head>
+<body>
+    <!--Navbar Starts-->
+    <div class="navbar">
+        <img src="STAR_HOPPERS__1_-removebg-preview.png" class="logo" alt="">
+        <a href="index.html"><p>Home</p></a>
+        <div class="autocomplete">
+            <input type="search" class="search" id="myInput" placeholder=" &#128269; Search">
+            <div id="autocomplete-list" class="autocomplete-items"></div>
+          </div>
+        <a href="destination.html"><p>Destination Catalog</p></a>
+        <a href="resources.html"><p>Educational Resources</p></a>
+        <a href="Itinerary Generator.html"><p>Itinerary Generator</p></a>
+        <a href="tours.html"><p>Virtual Tours</p></a>
+    </div>
+    
+    <!--Navbar Ends-->
+    <div class="destinaton-catalog">
+        <p><span>Solar System Destination Catalog: </span>Explore the Wonders of Our Solar System</p>
+    </div>
+    <div class="intro">
+        <div class="intro-content">
+        <p>Welcome to the Solar System Destination Catalog, where we invite you to embark on an extraordinary journey through the cosmos. Explore our celestial neighborhood, from the scorching plains of Mercury to the icy mysteries of Neptune. Each destination is a unique world waiting to be discovered.</p>
+
+           <p>Unveil the secrets of our solar system, as you delve into the rugged terrains of Mars, witness the majesty of Saturn's rings, and traverse the exotic landscapes of distant moons. Our catalog is your passport to awe-inspiring adventures and unparalleled educational experiences.</p>
+            
+            <p>Whether you're an aspiring space traveler or a curious explorer, these pages offer a gateway to the wonders of space. Join us as we navigate the orbits of planets, unravel the mysteries of comets, and unravel the history of our cosmic neighbors.</p>
+            
+            <p>Prepare to be captivated, informed, and inspired. Your cosmic odyssey begins here, in the Solar System Destination Catalog.</p>
+        </div>
+        <img class="intro-img" src="destination.png" alt="">
+    </div>
+    <div class="planets">
+        <div class="mercury">
+            <h2 class="hover" style="text-align: center;">Mercury:The Sun's Scorching Neighbor</h2>
+            <a href=""><img id="mercury" src="Mercury.png" alt=""></a>
+            <span>Mercury is the closest planet to the Sun in our solar system, making it a scorching and mysterious world. It is a rocky planet, similar in composition to Earth's Moon, with a surface that's heavily cratered due to eons of meteorite impacts.</span>
+        </div>
+        <div class="venus">
+            <h2 class="hover" style="text-align: center;">Venus: The Enigmatic Twin of Earth</h2>
+            <a href=""><img src="venus_jg.png" alt=""></a>
+            <span>Venus, often referred to as Earth's "sister planet," is one of the most intriguing and enigmatic worlds in our solar system. While it shares similarities with Earth in terms of size and composition, Venus is a world of extreme conditions and mysteries.</span>
+        </div>
+        <div class="earth">
+            <h2 class="hover" style="text-align: center;">Earth: The Blue Jewel of the Solar System</h2>
+            <a href=""><img src="earth.png" alt=""></a>
+            <span>Earth, often referred to as the "Blue Planet," is the third planet from the Sun in our solar system. It is the only known celestial body to support life, making it a unique and precious world in the cosmos.</span>
+        </div>
+        <div class="mars">
+            <h2 class="hover" style="text-align: center;">Mars: The Red Planet of Mysteries and Possibilities</h2>
+            <a href=""><img src="mars.png" alt=""></a>
+            <span>Mars, often referred to as the "Red Planet," has long captured the imagination of humanity. It is a world of immense scientific interest and potential future exploration.</span>
+        </div>
+        <div class="jupiter">
+            <h2 class="hover" style="text-align: center;">Jupiter: The Majestic Gas Giant</h2>
+            <a href=""><img src="jupiter.png" alt=""></a>
+            <span>Jupiter, the largest planet in our solar system, is a majestic gas giant that commands attention with its immense size and mesmerizing features. Known for its stunning cloud bands, enormous storms, and a retinue of moons, Jupiter is a celestial wonder worth exploring.</span>
+        </div>
+        <div class="saturn">
+            <h2 class="hover" style="text-align: center;">Saturn: The Majestic Ringed Giant</h2>
+            <a href=""><img src="saturn.png" alt=""></a>
+            <span>Saturn, often described as the "Jewel of the Solar System," is a breathtaking and iconic planet known for its stunning ring system and captivating beauty.</span>
+        </div>
+        <div class="uranus">
+            <h2 class="hover" style="text-align: center;">Uranus: The Sideways Ice Giant</h2>
+            <a href=""><img src="uranus.png" alt=""></a>
+            <span>Uranus is one of the ice giants of our solar system, a distant and intriguing world known for its peculiar characteristics. It's a planet unlike any other, distinguished by its unique axial tilt and vibrant rings.</span>
+        </div>
+        <div class="neptune">
+            <h2 class="hover" style="text-align: center;">Neptune: The Mystic Giant of the Outer Solar System</h2>
+            <a href=""><img src="neptune.png" alt=""></a>
+            <span>Neptune, the eighth and farthest known planet from the Sun, is a majestic and enigmatic giant of the outer solar system. This distant ice giant is a realm of profound mysteries and captivating features.</span>
+        </div>
+    </div>
+
+    
+</body>
+<script>
+    function autocomplete(inp, arr) {
+      var currentFocus;
+    
+      inp.addEventListener("input", function(e) {
+          var a, b, i, val = this.value;
+          closeAllLists();
+          if (!val) { return false;}
+          currentFocus = -1;
+          a = document.createElement("DIV");
+          a.setAttribute("id", this.id + "autocomplete-list");
+          a.setAttribute("class", "autocomplete-items");
+          this.parentNode.appendChild(a);
+          for (i = 0; i < arr.length; i++) {
+            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+              b = document.createElement("DIV");
+              b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+              b.innerHTML += arr[i].substr(val.length);
+              b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+              b.addEventListener("click", function(e) {
+                  inp.value = this.getElementsByTagName("input")[0].value;
+                  closeAllLists();
+              });
+              a.appendChild(b);
+            }
+          }
+      });
+    
+      inp.addEventListener("keydown", function(e) {
+          var x = document.getElementById(this.id + "autocomplete-list");
+          if (x) x = x.getElementsByTagName("div");
+          if (e.keyCode == 40) {
+            currentFocus++;
+            addActive(x);
+          } else if (e.keyCode == 38) {
+            currentFocus--;
+            addActive(x);
+          } else if (e.keyCode == 13) {
+            e.preventDefault();
+            if (currentFocus > -1) {
+              if (x) x[currentFocus].click();
+            }
+          }
+      });
+      function addActive(x) {
+        if (!x) return false;
+        removeActive(x);
+        if (currentFocus >= x.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = (x.length - 1);
+        x[currentFocus].classList.add("autocomplete-active");
+      }
+      function removeActive(x) {
+        for (var i = 0; i < x.length; i++) {
+          x[i].classList.remove("autocomplete-active");
+        }
+      }
+      function closeAllLists(elmnt) {
+        var x = document.getElementsByClassName("autocomplete-items");
+        for (var i = 0; i < x.length; i++) {
+          if (elmnt != x[i] && elmnt != inp) {
+            x[i].parentNode.removeChild(x[i]);
+          }
+        }
+      }
+      document.addEventListener("click", function (e) {
+          closeAllLists(e.target);
+      });
+    }
+    
+    var fruits = ["Apple", "Banana", "Cherry", "Date", "Fig", "Grapes", "Kiwi", "Mango", "Orange", "Peach", "Pear", "Pineapple", "Plum", "Strawberry", "Watermelon"];
+    autocomplete(document.getElementById("myInput"), fruits);
+    </script>
+    <script>
+        ScrollReveal({ 
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay:400
+        });
+        ScrollReveal().reveal('.destinaton-catalog, .intro-content', { delay: 200, origin:'left' });
+        ScrollReveal().reveal('.intro-img', { delay: 200, origin:'right' });
+        ScrollReveal().reveal('.mercury, .venus, .earth, .mars, .jupiter, .saturn, .uranus, .neptune', { delay: 200 });
+    </script>
+</html>

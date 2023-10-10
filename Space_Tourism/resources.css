@@ -1,0 +1,206 @@
+/**Navbar Starts**/
+
+body {
+    
+    background-image: url('new-bg2.jpg');
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.navbar{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.logo{
+    width: 136px;
+    height: 131px;
+}
+.search{
+    border-radius: 150px;
+    width: 300px;
+    height: 50px;
+    background-color: #1E1E1E;
+    padding: 20px;
+    color: white;
+    margin-left: 72px;
+    margin-right: 50px ;
+    margin-top: 34px
+
+}
+.autocomplete-items{
+    
+    border-radius: 0 0 150px 150px;
+   
+    width: 291px;
+    height: 50px;
+    margin-left: 71px;
+    padding-left: 10px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    font-size: 20px;
+}
+/**Navbar Starts**/
+
+
+.educational-resources{
+    font-size: 40px;
+    margin-left: 15px;
+}
+#typewriter-text{
+    font-size: 25px;
+    width: 50%;
+    text-align: justify;
+    margin: 20px;
+}
+#typewriter-text {
+    overflow: hidden; /* Hide overflowing text */
+    /* border-right: 2px solid #00ff00; Blinking cursor effect */
+    /* white-space: nowrap; Prevent text from wrapping */
+    margin-left:0px;
+    width: 50%;
+    text-align:justify;
+    font-size: 25px;
+}
+.about-solar p{
+    width: 50%;
+    font-size: 20px;
+    text-align: justify;
+    margin: 20px;
+}
+.about-solar{
+    margin-left: 100px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+.about-solar-para{
+    display: flex;
+    flex-direction: row;
+}
+.about-solar img{
+    width: 400px;
+}
+.youtube{
+    margin-left: 350px;
+    margin-top: 20px;
+}
+.planets p{
+    width: 50%;
+    text-align: justify;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.planets{
+    margin-left: 100px;
+}
+
+.planet-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr); /* Create 4 columns */
+    grid-gap: 10px;
+}
+
+.planet-card {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.25s;
+}
+
+.planet-card:hover{
+    box-shadow: 0 0 0 2px grey;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.planet-name {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+}
+.moon-grid {
+    display: flex;
+    grid-template-columns: repeat(7, 1fr); /* Create 7 columns */
+    grid-gap: 10px;
+    flex-direction: column;
+}
+
+.moon-card {
+    text-align: center;
+    background-color: none;
+    color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.moon-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-left: 177px;
+}
+.moon-grid p,ol{
+    width: 50%;
+    text-align: justify;
+}
+.moon-grid img{
+    width: 200px;
+}
+.moons h2{
+    margin-left: 30px;
+    font-size: 40px;
+}
+.ol{
+    display: flex;
+    flex-direction: column;
+}
+.content-img, .content-img2{
+    display: flex;
+    flex-direction: row;
+
+}
+.content-img img{
+    width: 350px;
+    height: 200px;
+}
+.content-img2 img{
+    width: 400px;
+    height: 200px;
+    margin-right: 331px;
+    margin-top: 40px;
+}
+.content-img2 ol{
+    width: 1162px;
+}
+.trition{
+
+    height: 200px;
+}
+.moon-name{
+    width: 200px;
+}
+.planet-grid a{
+    font-style: italic;
+    color: white;
+}

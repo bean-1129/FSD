@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturn</title>
+    <link rel="stylesheet" href="venus.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Navbar Starts-->
+    <div class="navbar">
+        <img src="STAR_HOPPERS__1_-removebg-preview.png" class="logo" alt="">
+        <a href="index.html"><p>Jupiter</p></a>
+        <div class="autocomplete">
+            <input type="search" class="search" id="myInput" placeholder=" &#128269; Search">
+            <div id="autocomplete-list" class="autocomplete-items"></div>
+          </div>
+        <a href="destination.html"><p>Destination Catalog</p></a>
+        <a href="resources.html"><p>Educational Resources</p></a>
+        <a href="Itinerary Generator.html"><p>Itinerary Generator</p></a>
+        <a href="tours.html"><p>Virtual Tours</p></a>
+    </div>
+   
+    <!--Navbar Ends-->
+    <div class="mercury">
+        <h1>Saturn</h1>
+        <p><ul>
+            <li>Known for its stunning system of rings made of ice and rock particles.</li>
+             <li>Gas giant with a thick atmosphere.</li>
+             <li>Many moons, including Titan, with a dense nitrogen-rich atmosphere and
+                lakes of liquid methane.</li>
+        </ul></p>
+    </div>
+    <div class="youtube">
+        <iframe width="800" height="400" src="https://www.youtube.com/embed/epZdZaEQhS0?si=5XL0oMrM60UiHd0i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</body>
+<script>
+    function autocomplete(inp, arr) {
+      var currentFocus;
+    
+      inp.addEventListener("input", function(e) {
+          var a, b, i, val = this.value;
+          arr1 = [];
+          closeAllLists();
+          if (!val) { return false;}
+          currentFocus = -1;
+          a = document.createElement("DIV");
+          a.setAttribute("id", this.id + "autocomplete-list");
+          a.setAttribute("class", "autocomplete-items");
+          this.parentNode.appendChild(a);
+          for (i = 0; i < arr.length; i++) {
+            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+              b = document.createElement("DIV");
+              b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+              arr1.splice(arr1.length,0, arr[i].substr(0, val.length) );
+              b.innerHTML += arr[i].substr(val.length);
+              b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+              b.addEventListener("click", function(e) {
+                  inp.value = this.getElementsByTagName("input")[0].value;
+                  closeAllLists();
+                
+              });
+              
+              a.appendChild(b);
+            }
+          }console.log(arr1.length);
+      });
+    
+      inp.addEventListener("keydown", function(e) {
+          var x = document.getElementById(this.id + "autocomplete-list");
+          if (x) x = x.getElementsByTagName("div");
+          if (e.keyCode == 40) {
+            currentFocus++;
+            addActive(x);
+          } else if (e.keyCode == 38) {
+            currentFocus--;
+            addActive(x);
+          } else if (e.keyCode == 13) {
+            e.preventDefault();
+            if (currentFocus > -1) {
+              if (x) x[currentFocus].click();
+            }
+          }
+      });
+      function addActive(x) {
+        if (!x) return false;
+        removeActive(x);
+        if (currentFocus >= x.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = (x.length - 1);
+        x[currentFocus].classList.add("autocomplete-active");
+      }
+      function removeActive(x) {
+        for (var i = 0; i < x.length; i++) {
+          x[i].classList.remove("autocomplete-active");
+        }
+      }
+      function closeAllLists(elmnt) {
+        var x = document.getElementsByClassName("autocomplete-items");
+        for (var i = 0; i < x.length; i++) {
+          if (elmnt != x[i] && elmnt != inp) {
+            x[i].parentNode.removeChild(x[i]);
+          }
+        }
+      }
+      document.addEventListener("click", function (e) {
+          closeAllLists(e.target);
+      });
+    }
+    
+    var celestialArray = [
+  "Mercury",
+  "Caloris Basin",
+  "Double sunset",
+  "Venus",
+  "Skadi Mons",
+  "Danilova",
+  "Aglaonice",
+  "Saskja",
+  "The Moon",
+  "Apollo 11",
+  "Apollo 15",
+  "Apollo 17",
+  "Tycho Crater",
+  "Copernicus Crater",
+  "Mare Tranquillitatis (Sea of Tranquility)",
+  "Mare Imbrium (Sea of Showers)",
+  "Mare Imbrium (Sea of Showers)",
+  "Clavius Crater",
+  "The Lunar Poles",
+  "Rupes Altai",
+  "Sinus Iridum (Bay of Rainbows)",
+  "Mars",
+  "Mawrth Vallis",
+  "Bacquerel Crater",
+  "Olympus Mons",
+  "Promethei Planum",
+  "Galle Crater",
+  "Neukum Crater",
+  "Sunset Mars",
+  "Perseverance landing site",
+  "Phobos",
+  "Jupiter",
+  "The Great Red Spot (GRS)",
+  "Auroras",
+  "Io",
+  "Ganymede",
+  "Europa",
+  "Saturn",
+  "Saturn’s rings",
+  "Titan",
+  "Enceladus",
+  "Uranus",
+  "Rings of Uranus",
+  "Miranda",
+  "Neptune",
+  "Triton"
+];
+    autocomplete(document.getElementById("myInput"), celestialArray);
+    </script>
+</html>

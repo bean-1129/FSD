@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Space Travel Packages</title>
+  <link rel="stylesheet" type="text/css" href="styles2.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!--Navbar Starts-->
+   <div class="navbar">
+    <img src="STAR_HOPPERS__1_-removebg-preview.png" class="logo" alt="">
+    <a href="index.html"><p>Home</p></a>
+    <div class="autocomplete">
+        <input type="search" class="search" id="myInput" placeholder=" &#128269; Search">
+        <div id="autocomplete-list" class="autocomplete-items"></div>
+      </div>
+    <a href="destination.html"><p>Destination Catalog</p></a>
+    <a href="resources.html"><p>Educational Resources</p></a>
+    <a href="Itinerary Generator.html"><p>Itinerary Generator</p></a>
+    <a href="tours.html"><p>Virtual Tours</p></a>
+</div>
+
+<!--Navbar Ends-->
+  <div class="container">
+    <h1>Space Travel Packages</h1>
+    <label class="destination-label" for="destination">Select a Destination: </label>
+    <select id="destination">
+      <option value="" disabled selected>Select a destination</option> <!-- Default option -->
+      <option value="Mercury">Mercury</option>
+      <option value="Venus">Venus</option>
+      <option value="Moon">Earth's Moon</option>
+      <option value="Earth">Earth</option>
+      <option value="Mars">Mars</option>
+      <option value="Jupiter">Jupiter</option>
+      <option value="Saturn">Saturn</option>
+      <option value="Uranus">Uranus</option>
+      <option value="Neptune">Neptune</option>
+    </select>
+    <div id="package-list"></div>
+  </div>
+  <script src="script2.js"></script>
+</body>
+</html>
